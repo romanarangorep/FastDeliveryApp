@@ -15,8 +15,10 @@ public class TechProduct extends Product{
 
     @Override
     public double calculateTotalPrice() {
-        double totalPrice;
-        totalPrice = (basePrice*cuantity+(basePrice*0.05*warrantyMonths));
+      
+        double warrantyRatePerMonth = 0.05 / 12.0;
+        double warrantySurchargePerUnit = basePrice * warrantyRatePerMonth * warrantyMonths;
+        double totalPrice = (basePrice + warrantySurchargePerUnit) * cuantity;
         return totalPrice;
     }
 
