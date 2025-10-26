@@ -108,9 +108,8 @@ public class App {
             }catch(Exception e){
                 System.out.println("Error");
             }
-            
         }
-         sc.close();
+         sc.close(); 
     }
 
 }
