@@ -95,7 +95,7 @@ public class App {
 
                     break;
                 case 5:
-                 control.calculateTotalOrderValue();
+                System.out.println("El total de su pedido es: $"+control.calculateTotalOrderValue());
                     break;
                 case 6:
                     exit += 1;
@@ -104,11 +104,13 @@ public class App {
                  System.out.println("Opcion invalida ingrese de nuevo");
                     break;
             }
-            sc.close();
+           
             }catch(Exception e){
                 System.out.println("Error");
             }
+            
         }
+         sc.close();
     }
 
 }
